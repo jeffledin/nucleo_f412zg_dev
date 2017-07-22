@@ -1,0 +1,19 @@
+!SESSION 2017-07-21 23:58:42.017 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -data C:\Users\ledin\workspace\embedded\nucleo_f412zg -pluginCustomization configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-07-21 23:58:46.574
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-07-21 23:58:46.584
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY org.eclipse.equinox.registry 4 1 2017-07-21 23:58:46.601
+!MESSAGE Executable extension definition for "resolver" not found.
+
+!ENTRY fr.ac6.mcu.ide 1 1 2017-07-21 23:58:47.266
+!MESSAGE Started RMI Server, listening on port 21112
