@@ -54,8 +54,7 @@ void initOSC(void)
 
 void initLEDs(void)
 {
-	// TODO: Figure out how to access individual bits, similar to MPLAB
-	//RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE); // TODO: investigate why this is required
+	//RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE); // TODO: investigate this syntax
 
 	RCC->AHB1ENR |= 0x2; // enable clock on Port B // THIS IS IMPORTANT
 	GPIOB->MODER = 0x10004000; // set PB7, PB14 as output
@@ -72,6 +71,7 @@ void initLEDs(void)
 	//	GPIO_SetBits(GPIOB, GPIO_Pin_14);
 }
 
+// TODO: Play around with timer interrupts
 void initTIM6(void)
 {
 	// Counter should overflow every 2s
