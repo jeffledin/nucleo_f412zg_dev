@@ -1030,3 +1030,8 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -pluginCustomization c
 
 !ENTRY org.eclipse.cdt.core 1 0 2017-07-23 22:07:20.614
 !MESSAGE Indexed 'blinky_blinky' (46 sources, 96 headers) in 1.13 sec: 8,727 declarations; 35,247 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.core.resources 2 2 2017-07-23 22:18:03.720
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2017-07-23 22:18:03.720
+!MESSAGE The project description file (.project) for '.,m,n,.n' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
