@@ -10,17 +10,20 @@
 
 #include "stm32f4xx.h"
 #include "defines.h"
+#include <string.h>
 
 void initOSC(void);
 void initLEDs(void);
 void initTIM6(void);
 void initUSART3(void);
 void transmitByte(unsigned char data);
+void transmitBuffer(unsigned char *buffer, unsigned int bufferSize);
 unsigned char receiveByte(void);
 
 int main(void)
 {
 	unsigned char count = 0;
+	unsigned char buffer[] = "Hello from STM32F412ZG!\n";
 	initOSC();
 	initLEDs();
 	initUSART3();
@@ -28,9 +31,8 @@ int main(void)
 
 	while(1)
 	{
-		//USART_SendData(USART3, count + 48);
-		transmitByte('h'); // write junk
-		count++;
+		transmitBuffer(buffer, strlen(buffer));
+		//transmitByte('h'); // write junk
 		for(unsigned int i = 0; i < 100000; i++);
 	}
 }
@@ -51,7 +53,6 @@ void initLEDs(void)
 	GPIOB->ODR = 0x00004081; // set PB0, PB7, PB14 high
 }
 
-// TODO: Play around with timer interrupts
 void initTIM6(void)
 {
 	// Counter should overflow every 1s
@@ -101,6 +102,14 @@ void initUSART3(void)
 //	usartConfig.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 //	USART_Cmd(USART3, ENABLE);
 //	USART_Init(USART3, &usartConfig);
+}
+
+void transmitBuffer(unsigned char *buffer, unsigned int bufferSize)
+{
+	for(unsigned char i = 0; i < bufferSize; i++)
+	{
+		transmitByte(buffer[i]);
+	}
 }
 
 void transmitByte(unsigned char data)
