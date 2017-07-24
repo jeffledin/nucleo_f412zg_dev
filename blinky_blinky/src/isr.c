@@ -16,7 +16,7 @@ void TIM6_IRQHandler()
 {
 	unsigned static char state = TOGGLE_ALL_LEDS;
 
-	TIM6->SR &= (0 << 0); // turn off interrupt flag
+	TIM6->SR &= ~(1 << 0); // turn off interrupt flag
 
 	switch(state)
 	{

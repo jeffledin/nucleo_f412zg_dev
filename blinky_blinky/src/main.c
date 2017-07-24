@@ -26,19 +26,6 @@ int main(void)
 
 	while(1)
 	{
-//		if(count == 0)
-//		{
-//			++count;
-//			GPIOB->ODR ^= PB9_MASK;
-//		}
-//		else if(count == 1)
-//		{
-//			--count;
-//			GPIOB->ODR ^= PB14_MASK;
-//			GPIOB->ODR ^= PB9_MASK;
-//		}
-//		while(!TIM6_UIF); // wait for counter to overflow and flag to be set
-//		TIM6->SR &= (0 << 0); // reset TIM6 flag
 	};
 }
 
@@ -56,15 +43,6 @@ void initLEDs(void)
 	GPIOB->MODER = 0x10004001; // set PB0, PB7, PB14 as output
 	GPIOB->OTYPER = 0x00000000; // set all pins as push-pull (this is default anyways)
 	GPIOB->ODR = 0x00004081; // set PB0, PB7, PB14 high
-
-	//	GPIO_InitTypeDef gpio;
-	//
-	//	GPIO_StructInit(&gpio);
-	//	gpio.GPIO_Pin = GPIO_Pin_14;
-	//	gpio.GPIO_Mode = GPIO_Mode_OUT;
-	//	GPIO_Init(GPIOB, &gpio);
-	//
-	//	GPIO_SetBits(GPIOB, GPIO_Pin_14);
 }
 
 // TODO: Play around with timer interrupts
