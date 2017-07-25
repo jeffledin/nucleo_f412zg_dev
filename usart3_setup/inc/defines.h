@@ -18,5 +18,7 @@
 #define USART3_TXE	(USART3->SR & (1 << 7))
 #define USART3_
 #define TIM6_UIF	(TIM6->SR & (1 << 0))
+#define TIM7_UIF	(TIM7->SR & (1 << 0))
+#define OSC_FREQ	16000000
 
 #endif /* DEFINES_H_ */

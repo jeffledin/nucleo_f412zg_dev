@@ -18,8 +18,6 @@ void initTIM6(void);
 
 int main(void)
 {
-	unsigned char count = 0;
-
 	initOSC();
 	initLEDs();
 	initTIM6();
