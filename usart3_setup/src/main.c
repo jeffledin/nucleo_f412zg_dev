@@ -23,7 +23,7 @@ int main(void)
 	initOSC();
 	initLEDs();
 	//initUSART3();
-	initBitBangedUSART(4800);
+	initBitBangedUSART(9600);
 	initTIM6();
 
 	while(1)

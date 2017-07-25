@@ -80,11 +80,10 @@ void waitTIM7(void)
 void initTIM7(unsigned int baudrate)
 {
 	unsigned int periodRegister = (1 / (double) baudrate) / (1 / (double) OSC_FREQ);
-	// Counter should overflow every 0.000104s
+
 	RCC->APB1ENR |= RCC_APB1ENR_TIM7EN; // enable clock for TIM7
 
 	TIM7->PSC = 0; // prescaler of 1 for maximum resolution
-	//TIM7->ARR = 1664; // period register -- period of 0.000104s (9600 baud)
 	TIM7->ARR = periodRegister;
 	TIM7->CNT = 0; // default of 0 for the counter
 }
